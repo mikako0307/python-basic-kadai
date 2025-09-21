@@ -1,0 +1,79 @@
+user@DESKTOP-9A8406O MINGW64 ~
+$ mkdir_challenge
+bash: mkdir_challenge: command not found
+
+user@DESKTOP-9A8406O MINGW64 ~
+$ mkdir git_challenge
+
+user@DESKTOP-9A8406O MINGW64 ~
+$ cd git_challenge
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge
+$ touch hello_world.txt
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge
+$ ls
+hello_world.txt
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge
+$ rm hello_world.txt
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge
+$ ls
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge
+$ git init
+Initialized empty Git repository in C:/Users/user/git_challenge/.git/
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge (main)
+$ touch hello_world.txt
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge (main)
+$ echo Hello, world! >>hello_world.txt
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge (main)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge (main)
+$ git commit -m First commit
+[main (root-commit) e0ef634] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge (main)
+$ echo こんにちは、世界! >>hello_world.txt
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge (main)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge (main)
+$ git commit -m Add こんにちは、世界
+[main ae14af4] Add こんにちは、世界
+ 1 file changed, 1 insertion(+)
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge (main)
+$ git log
+commit ae14af44274a90765dd07b24bd11d851d8532b97 (HEAD -> main)
+Author: mikako0307 <akane.neko0307@gmail.com>
+Date:   Mon Sep 15 16:28:06 2025 +0900
+
+    Add こんにちは、世界
+
+commit e0ef6346098a7c91c1388654d6df9682d013553c
+Author: mikako0307 <akane.neko0307@gmail.com>
+Date:   Mon Sep 15 16:25:27 2025 +0900
+
+    First commit
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge (main)
+$ git log -p git_challenge
+fatal: ambiguous argument 'git_challenge': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+user@DESKTOP-9A8406O MINGW64 ~/git_challenge (main)
+$ git log --oneline
+ae14af4 (HEAD -> main) Add こんにちは、世界
+e0ef634 First commit
